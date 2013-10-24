@@ -1,0 +1,31 @@
+<h1>Listing github_accounts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Login</th>
+      <th>Token</th>
+      <th>User</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @github_accounts.each do |github_account| %>
+      <tr>
+        <td><%= github_account.login %></td>
+        <td><%= github_account.token %></td>
+        <td><%= github_account.user_id %></td>
+        <td><%= link_to 'Show', github_account %></td>
+        <td><%= link_to 'Edit', edit_github_account_path(github_account) %></td>
+        <td><%= link_to 'Destroy', github_account, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Github account', new_github_account_path %>

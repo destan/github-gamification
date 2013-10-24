@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Login:</strong>
+  <%= @github_account.login %>
+</p>
+
+<p>
+  <strong>Token:</strong>
+  <%= @github_account.token %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @github_account.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_github_account_path(@github_account) %> |
+<%= link_to 'Back', github_accounts_path %>
