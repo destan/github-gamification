@@ -1,0 +1,37 @@
+<%= form_for(@commit_file) do |f| %>
+  <% if @commit_file.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@commit_file.errors.count, "error") %> prohibited this commit_file from being saved:</h2>
+
+      <ul>
+      <% @commit_file.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :filename %><br>
+    <%= f.text_field :filename %>
+  </div>
+  <div class="field">
+    <%= f.label :additions %><br>
+    <%= f.number_field :additions %>
+  </div>
+  <div class="field">
+    <%= f.label :deletions %><br>
+    <%= f.number_field :deletions %>
+  </div>
+  <div class="field">
+    <%= f.label :changed_lines %><br>
+    <%= f.number_field :changed_lines %>
+  </div>
+  <div class="field">
+    <%= f.label :commit_id %><br>
+    <%= f.number_field :commit_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

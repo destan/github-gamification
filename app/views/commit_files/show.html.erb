@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Filename:</strong>
+  <%= @commit_file.filename %>
+</p>
+
+<p>
+  <strong>Additions:</strong>
+  <%= @commit_file.additions %>
+</p>
+
+<p>
+  <strong>Deletions:</strong>
+  <%= @commit_file.deletions %>
+</p>
+
+<p>
+  <strong>Changed lines:</strong>
+  <%= @commit_file.changed_lines %>
+</p>
+
+<p>
+  <strong>Commit:</strong>
+  <%= @commit_file.commit_id %>
+</p>
+
+<%= link_to 'Edit', edit_commit_file_path(@commit_file) %> |
+<%= link_to 'Back', commit_files_path %>

@@ -1,0 +1,35 @@
+<h1>Listing commit_files</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Filename</th>
+      <th>Additions</th>
+      <th>Deletions</th>
+      <th>Changed lines</th>
+      <th>Commit</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @commit_files.each do |commit_file| %>
+      <tr>
+        <td><%= commit_file.filename %></td>
+        <td><%= commit_file.additions %></td>
+        <td><%= commit_file.deletions %></td>
+        <td><%= commit_file.changed_lines %></td>
+        <td><%= commit_file.commit_id %></td>
+        <td><%= link_to 'Show', commit_file %></td>
+        <td><%= link_to 'Edit', edit_commit_file_path(commit_file) %></td>
+        <td><%= link_to 'Destroy', commit_file, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Commit file', new_commit_file_path %>

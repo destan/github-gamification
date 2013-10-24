@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  filename: MyString
+  additions: 1
+  deletions: 1
+  changed_lines: 1
+  commit_id: 1
+
+two:
+  filename: MyString
+  additions: 1
+  deletions: 1
+  changed_lines: 1
+  commit_id: 1
