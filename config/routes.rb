@@ -1,4 +1,6 @@
 GithubGamification::Application.routes.draw do
+  resources :commits
+
   resources :repos
 
   resources :github_accounts

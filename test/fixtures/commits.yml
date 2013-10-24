@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  sha: MyString
+  url: MyString
+  message: MyString
+  repo_id: 1
+
+two:
+  sha: MyString
+  url: MyString
+  message: MyString
+  repo_id: 1
