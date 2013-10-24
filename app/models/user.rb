@@ -5,4 +5,5 @@ class User < ActiveRecord::Base
 
   include Authentication::ActiveRecordHelpers
 
+  has_one :github_account
 end
