@@ -11,7 +11,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131024190420) do
+ActiveRecord::Schema.define(version: 20131024191357) do
+
+  create_table "commit_files", force: true do |t|
+    t.string   "filename"
+    t.integer  "additions"
+    t.integer  "deletions"
+    t.integer  "changed_lines"
+    t.integer  "commit_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "commits", force: true do |t|
+    t.string   "sha"
+    t.string   "url"
+    t.string   "message"
+    t.integer  "repo_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "github_accounts", force: true do |t|
+    t.string   "login"
+    t.string   "token"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "repos", force: true do |t|
+    t.string   "name"
+    t.string   "full_name"
+    t.text     "description"
+    t.string   "owner"
+    t.integer  "github_account_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
