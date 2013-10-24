@@ -1,4 +1,6 @@
 GithubGamification::Application.routes.draw do
+  resources :repos
+
   resources :github_accounts
 
   devise_for :users, :controllers => {:omniauth_callbacks => "omniauth_callbacks"}

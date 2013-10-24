@@ -1,0 +1,35 @@
+<h1>Listing repos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Full name</th>
+      <th>Description</th>
+      <th>Owner</th>
+      <th>Github account</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @repos.each do |repo| %>
+      <tr>
+        <td><%= repo.name %></td>
+        <td><%= repo.full_name %></td>
+        <td><%= repo.description %></td>
+        <td><%= repo.owner %></td>
+        <td><%= repo.github_account_id %></td>
+        <td><%= link_to 'Show', repo %></td>
+        <td><%= link_to 'Edit', edit_repo_path(repo) %></td>
+        <td><%= link_to 'Destroy', repo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Repo', new_repo_path %>
