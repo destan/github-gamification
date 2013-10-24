@@ -19,7 +19,7 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'octokit'
 gem 'devise'
-gem "twitter-bootstrap-rails"
+gem 'twitter-bootstrap-rails', github: 'seyhunak/twitter-bootstrap-rails', branch: 'bootstrap3'
 gem 'omniauth-github'
 #gem "resque", "~> 2.0.0.pre.1", github: "resque/resque", :require => 'resque/server'
 gem "resque", :require => 'resque/server'
