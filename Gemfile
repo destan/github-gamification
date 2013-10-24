@@ -15,3 +15,15 @@ gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
+
+
+gem 'octokit'
+gem 'devise'
+gem "twitter-bootstrap-rails"
+gem 'omniauth-github'
+#gem "resque", "~> 2.0.0.pre.1", github: "resque/resque", :require => 'resque/server'
+gem "resque", :require => 'resque/server'
+
+gem "github_data_parser", :github => 'kodgemisi/github-data-parser'
+
+gem "awesome_print"
