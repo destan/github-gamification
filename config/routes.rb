@@ -9,6 +9,9 @@ GithubGamification::Application.routes.draw do
 
   devise_for :users, :controllers => {:omniauth_callbacks => "omniauth_callbacks"}
   get "home/index"
+
+  mount Resque::Server, :at => "/resque"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
