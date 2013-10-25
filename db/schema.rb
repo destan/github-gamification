@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131025232814) do
+ActiveRecord::Schema.define(version: 20131025233121) do
 
   create_table "commit_files", force: true do |t|
     t.string   "filename"
@@ -22,6 +22,16 @@ ActiveRecord::Schema.define(version: 20131025232814) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "commit_points", id: false, force: true do |t|
+    t.integer  "commit_id"
+    t.integer  "language_id"
+    t.float    "point"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "commit_points", ["commit_id", "language_id"], name: "index_commit_points_on_commit_id_and_language_id"
 
   create_table "commits", force: true do |t|
     t.string   "sha"
