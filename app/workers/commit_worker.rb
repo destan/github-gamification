@@ -10,7 +10,7 @@ class CommitWorker
       commit_file.filename = file.filename
       commit_file.additions = file.additions
       commit_file.deletions = file.deletions
-      #commit_file.changs = commit_file.changes
+      commit_file.changed_lines = commit_file.changes
       commit_file.commit_id  = commit["id"]
       commit_file.save
     end
