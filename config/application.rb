@@ -19,5 +19,9 @@ module GithubGamification
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+
+    ENV['GITHUB_CLIENT_ID'] = "CLIENT_ID";
+    ENV['GITHUB_CLIENT_SECRET'] = "CLIENT_SECRET";
+
   end
 end
