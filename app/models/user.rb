@@ -6,4 +6,7 @@ class User < ActiveRecord::Base
   include Authentication::ActiveRecordHelpers
 
   has_one :github_account
+  has_many :repos, :through => :github_account
+  has_many :commits, :through => :repos
+  has_many :commit_files, :through => :commits
 end
