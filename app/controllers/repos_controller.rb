@@ -4,7 +4,7 @@ class ReposController < ApplicationController
   # GET /repos
   # GET /repos.json
   def index
-    @repos = Repo.all
+    @repos = current_user.repos
   end
 
   # GET /repos/1
