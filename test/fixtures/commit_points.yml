@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  coomit_id: 1
+  language_id: 1
+  point: 1.5
+
+two:
+  coomit_id: 1
+  language_id: 1
+  point: 1.5
