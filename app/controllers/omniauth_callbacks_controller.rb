@@ -2,7 +2,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   def github
     user = User.find_for_oauth(request.env["omniauth.auth"])
-    Resque.enqueue(NewUserWorker, user.github_account)
+    #Resque.enqueue(NewUserWorker, user.github_account)
 
     if user.persisted?
       flash[:notice] = I18n.t "devise.omniauth_callbacks.success", :kind => "Github"
