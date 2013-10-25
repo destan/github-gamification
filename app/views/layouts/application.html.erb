@@ -40,19 +40,14 @@
 
     <div class="navbar navbar-static-top">
       <div class="container">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
         <a class="navbar-brand" href="#">GithubGamification</a>
-        <div class="nav-collapse collapse navbar-responsive-collapse">
-          <ul class="nav navbar-nav">
-            <li><%= link_to "Link1", "/path1"  %></li>
-            <li><%= link_to "Link2", "/path2"  %></li>
-            <li><%= link_to "Link3", "/path3"  %></li>
-          </ul>
-        </div>
+            <% if current_user %>
+                <ul class="nav navbar-nav pull-right">
+                  <li><%= link_to t("My Repos"), repos_path %></li>
+                  <li><%= link_to t("My Commits"), commits_path %></li>
+                  <li><%= link_to t("My Commit Files"), commit_files_path %></li>
+                </ul>
+            <% end %>
       </div>
     </div>
 
