@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131025154146) do
+ActiveRecord::Schema.define(version: 20131025232814) do
 
   create_table "commit_files", force: true do |t|
     t.string   "filename"
@@ -39,6 +39,14 @@ ActiveRecord::Schema.define(version: 20131025154146) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "github_id"
+  end
+
+  create_table "languages", force: true do |t|
+    t.string   "name"
+    t.string   "extensions"
+    t.float    "ratio"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "repos", force: true do |t|
