@@ -1,4 +1,13 @@
 <h1>Home#index</h1>
 <p>Find me in app/views/home/index.html.erb</p>
 
+<% Language.all.each do |language| %>
+
+   <%= language.name %> : <%= current_user.github_account.language_point(language.name) %>  <br />
+
+<% end%>
+
+
+
+
 <%= link_to 'Sign in with Github', user_omniauth_authorize_path(:github) %>
