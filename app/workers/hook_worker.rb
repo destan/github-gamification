@@ -12,7 +12,7 @@ class HookWorker
             repo["full_name"],
            'web',
            {
-             :url => "http://176.42.84.93:3000/hooks/track",
+             :url => ENV['GITHUB_HOOK_URL'],
              :content_type => 'json'
            },
            {

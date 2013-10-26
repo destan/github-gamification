@@ -22,6 +22,7 @@ module GithubGamification
 
     ENV['GITHUB_CLIENT_ID'] = "CLIENT_ID";
     ENV['GITHUB_CLIENT_SECRET'] = "CLIENT_SECRET";
+    ENV['GITHUB_HOOK_URL'] = "http://176.42.84.93/hooks/track"
 
   end
 end
