@@ -3,7 +3,7 @@
 
 <% Language.all.each do |language| %>
 
-   <%= language.name %> : <%= current_user.github_account.language_point(language.name) %>  <br />
+   <%= language.name %> : <%= current_user.github_account.language_point(language.name) if current_user && current_user.github_account %>  <br />
 
 <% end%>
 
