@@ -12,6 +12,7 @@ class NewUserWorker
       repo_obj.description = repo.description
       repo_obj.owner = repo.owner.login
       repo_obj.github_account_id = args[0]["id"]
+      repo_obj.repo_id = repo.id
       Resque.enqueue(RepoWorker, args[0], repo_obj) if repo_obj.save
     end
   end
