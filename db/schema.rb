@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131025233121) do
+ActiveRecord::Schema.define(version: 20131026151009) do
 
   create_table "commit_files", force: true do |t|
     t.string   "filename"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20131025233121) do
     t.datetime "updated_at"
   end
 
-  create_table "commit_points", id: false, force: true do |t|
+  create_table "commit_points", force: true do |t|
     t.integer  "commit_id"
     t.integer  "language_id"
     t.float    "point"
