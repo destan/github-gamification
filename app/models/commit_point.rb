@@ -3,5 +3,6 @@ class CommitPoint < ActiveRecord::Base
 
   belongs_to :language
   belongs_to :commit
+  has_one :repo, :through => :commit
 
 end
