@@ -46,6 +46,7 @@
                   <li><%= link_to t("My Repos"), repos_path %></li>
                   <li><%= link_to t("My Commits"), commits_path %></li>
                   <li><%= link_to t("My Commit Files"), commit_files_path %></li>
+                  <li><%= link_to("Logout", destroy_user_session_path, :method => :delete)%></li>
                 </ul>
             <% end %>
       </div>
