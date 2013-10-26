@@ -1,6 +1,6 @@
 GithubGamification::Application.routes.draw do
   get "hooks/index"
-  get "hooks/track"
+  post "hooks/track"
   resources :commit_files
 
   resources :commits
