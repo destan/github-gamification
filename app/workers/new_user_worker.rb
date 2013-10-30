@@ -1,3 +1,4 @@
+# Worker for processing new registration
 class NewUserWorker
   @queue = :user_queue
 
@@ -14,7 +15,8 @@ class NewUserWorker
       repo_obj.github_account_id = args[0]["id"]
       repo_obj.repo_id = repo.id
       Resque.enqueue(HookWorker, repo_obj.github_account, repo_obj) if repo_obj.save
-      Resque.enqueue(RepoWorker, args[0], repo_obj) if repo_obj.save
+      #Resque.enqueue(RepoWorker, args[0], repo_obj) if repo_obj.save
+      break
     end
   end
 

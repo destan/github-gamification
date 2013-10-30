@@ -1,3 +1,4 @@
+# Worker for processing a single commit and files inside it.
 class CommitWorker
   @queue = :commit_queue
 

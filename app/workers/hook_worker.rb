@@ -1,3 +1,4 @@
+# Worker for creating web hook in given repo
 class HookWorker
   @queue = :hook_queue
 

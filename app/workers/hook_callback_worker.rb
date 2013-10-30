@@ -1,3 +1,4 @@
+# Worker for processing callback from a hook
 class HookCallbackWorker
   @queue = :hook_callback_queue
 

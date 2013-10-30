@@ -1,3 +1,4 @@
+# Worker for processing a repository.
 class RepoWorker
   @queue = :repo_queue
 
