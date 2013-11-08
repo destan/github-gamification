@@ -1,0 +1,3 @@
+UpdateUsersWorker:
+    every:
+       - "30s"

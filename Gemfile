@@ -27,3 +27,6 @@ gem "resque", :require => 'resque/server'
 gem "github_data_parser", :github => 'kodgemisi/github-data-parser'
 
 gem "awesome_print"
+
+gem 'resque-scheduler', :require => 'resque_scheduler'
+
