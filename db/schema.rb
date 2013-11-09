@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131109011315) do
+ActiveRecord::Schema.define(version: 20131109144115) do
 
   create_table "commit_files", force: true do |t|
     t.string   "filename"
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 20131109011315) do
     t.datetime "updated_at"
     t.integer  "github_id"
     t.integer  "last_parsed_event_id"
+    t.datetime "last_parsed_event_time"
   end
 
   create_table "languages", force: true do |t|
